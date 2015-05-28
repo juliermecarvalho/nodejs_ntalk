@@ -17,7 +17,16 @@
             </tr>
         </thead>
         <tbody>
-oi
+            <% usuario.contatos.forEach(function(contato, index) { %>
+            <tr>
+                <td><%- contato.nome %></td>
+                <td><%- contato.email %></td>
+                <td>
+                    <a href="/contato/<%- index %>">Detalhes</a>
+                    <a href="/chat/<%- contato.email %>">Conversar</a>
+                </td>
+            </tr>
+            <% }) %>
         </tbody>
     </table>
 </section>
