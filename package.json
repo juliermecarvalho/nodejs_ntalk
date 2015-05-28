@@ -1,0 +1,14 @@
+{
+  "name": "ntalk",
+  "description": "chat teste",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+   "express": "3.4.7",
+   "express-load": "1.1.8",
+   "ejs": "0.8.5"
+  }
+}
