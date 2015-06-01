@@ -1,0 +1,2 @@
+D:\Aulas nodejs\ntalk\obj\Debug\ntalk.njsprojResolveAssemblyReference.cache
+D:\Aulas nodejs\ntalk\bin\Microsoft.NodejsTools.WebRole.dll

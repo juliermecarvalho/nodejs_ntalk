@@ -1,15 +1,15 @@
 {
-    "name": "ntalk",
-    "description": "chat teste",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "start": "node ./bin/www"
-    },
-    "dependencies": {
-        "express": "3.4.7",
-        "express-load": "1.1.8",
-        "ejs": "0.8.5",
-        "socket.io": "0.9.16"
-    }
+  "name": "ntalk",
+  "description": "chat teste",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "ejs": "0.8.5",
+    "express": "3.4.7",
+    "express-load": "1.1.8",
+    "socket.io": "^1.3.5"
+  }
 }

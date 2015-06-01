@@ -3,8 +3,8 @@ var express = require('express'),
     app = express(),
     load = require('express-load'),
     error = require('./middleware/error'),
-    server = require('http').createServer(app),
-    io = require('socket.io').listen(server);
+    http = require('http').Server(app),
+    io = require('socket.io').listen(http);
 
 
 app.set('views', __dirname + '/views');
@@ -31,16 +31,23 @@ load('models')
 .then('routes')
 .into(app);
 
+io.on('connection', function (socket) {
+    console.log('a user connected');
+});
 
-io.sockets.on('connection', function(client) {
+/**/
+io.on('connection', function(client) {
     client.on('send-server', function(data) {
         var msg = "<b>" + data.nome + ":</b> " + data.msg + "<br>";
         client.emit('send-client', msg);
         client.broadcast.emit('send-client', msg);
     });
 });
+/**/
 
-app.listen(3000, function(){
+
+ 
+http.listen(3000, function(){
   console.log("Ntalk no ar.");
 });
 
