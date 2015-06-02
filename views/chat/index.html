@@ -4,11 +4,12 @@
     <h2>Ntalk - Chat</h2>
 </header>
 <section>
-<pre id="chat"></pre>
+    <pre id="chat"></pre>
     <input type="hidden" id="nome" value="<%- usuario.nome %>">
     <input type="text" id="msg" placeholder="Mensagem">
     <button onclick="enviar();">Enviar</button>
 </section>
+
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io.connect('http://localhost:3000');

@@ -8,15 +8,20 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="clearfix hero-unit">
+        <div class="clearfix hero-unit container">
             <%-body%>
         </div>
         <footer class="text-center">
             <small>Ntalk (Node Talk) - Este é um projeto exemplo utilizado como didática no livro: <a href="http://www.casadocodigo.com.br/products/livro-nodejs" target="_blank">Aplicações web real-time com Node.js</a></small>
         </footer>
     </div>
+    
+    <!-- defini uma sessões para preencher é so usar <%- contentFor('teste') %> o que estiver em baixo será colocado aqui -->
+    <%-defineContent('teste')%>
 
-
+    <!-- antes do script -->
+    <%- script %>
+    <!-- depois do script -->
 
 
 

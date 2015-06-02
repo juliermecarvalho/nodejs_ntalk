@@ -11,6 +11,7 @@ var express = require('express'),
 app.set('views', __dirname + '/views');
 //app.set('view engine', 'ejs');
 app.set('layout', 'layout'); // defaults to 'layout'     
+app.set("layout extractScripts", true);
 app.use(expressLayouts);
 
 
