@@ -28,8 +28,6 @@
     <Compile Include="routes\home.js" />
     <Content Include="views\error.html" />
     <Content Include="views\exit.html" />
-    <Content Include="views\footer.html" />
-    <Content Include="views\header.html" />
     <Content Include="views\layout.html" />
     <Content Include="views\not-found.html" />
     <Content Include="views\server-error.html" />
