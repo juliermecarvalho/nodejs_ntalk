@@ -4,15 +4,19 @@ var express = require('express'),
     load = require('express-load'),
     error = require('./middleware/error'),
     http = require('http').Server(app),
+    expressLayouts = require('express-ejs-layouts');
     io = require('socket.io').listen(http);
 
 
 app.set('views', __dirname + '/views');
 //app.set('view engine', 'ejs');
-//app.set('view engine', 'html');
+app.set('layout', 'layout'); // defaults to 'layout'     
+app.use(expressLayouts);
+
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+//app.set('view options', { layout:  '/views/layout.ejs' });
 
 app.use(express.cookieParser('ntalk'));
 app.use(express.session());
