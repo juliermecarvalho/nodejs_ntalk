@@ -30,25 +30,14 @@ app.use(error.notFound);
 app.use(error.serverError);
 
 
-
 load('models')
-.then('controllers')
-.then('routes')
-.into(app);
+    .then('controllers')
+    .then('routes')
+    .into(app);
 
-io.on('connection', function (socket) {
-    console.log('a user connected');
-});
+load('sockets')
+    .into(io);
 
-/**/
-io.on('connection', function(client) {
-    client.on('send-server', function(data) {
-        var msg = "<b>" + data.nome + ":</b> " + data.msg + "<br>";
-        client.emit('send-client', msg);
-        client.broadcast.emit('send-client', msg);
-    });
-});
-/**/
 
 
  

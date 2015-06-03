@@ -16,6 +16,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="sockets\chat.js" />
     <Content Include="package.json" />
     <Compile Include="app.js" />
     <Compile Include="controllers\chat.js" />
@@ -45,6 +46,7 @@
   <ItemGroup>
     <Folder Include="controllers" />
     <Folder Include="middleware" />
+    <Folder Include="sockets\" />
     <Folder Include="public" />
     <Folder Include="public\images" />
     <Folder Include="public\javascripts" />
