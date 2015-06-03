@@ -23,6 +23,7 @@
     <Compile Include="controllers\home.js" />
     <Compile Include="middleware\autenticador.js" />
     <Compile Include="middleware\error.js" />
+    <Compile Include="public\javascripts\cliente-chat.js" />
     <Compile Include="routes\chat.js" />
     <Compile Include="routes\contatos.js" />
     <Compile Include="routes\home.js" />
