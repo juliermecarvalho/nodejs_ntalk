@@ -3,6 +3,7 @@
 module.exports = function (app) {
     return  {
         index: function (req, res) {
+            req.session.usuario = {};
             res.render('home/index');
         },
         

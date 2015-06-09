@@ -1,10 +1,12 @@
-﻿var socket = io.connect('http://localhost:3000');
+﻿
+var socket = io.connect('http://localhost:3000');
+
 socket.on('send-client', function (msg) {
-    document.getElementById('chat').innerHTML += msg;
+    var chat = document.getElementById('chat');
+    chat.innerHTML += msg;
 });
-var enviar = function () {
-    var nome = document.getElementById('nome').value;
-    var msg = document.getElementById('msg').value;
-    
-    socket.emit('send-server', { nome: nome, msg: msg });
+
+var enviar = function() {
+    var msg = document.getElementById('msg');
+    socket.emit('send-server', msg.value);
 };

@@ -32,6 +32,7 @@
     <Content Include="views\exit.html" />
     <Content Include="views\layout.html" />
     <Content Include="views\not-found.html" />
+    <Content Include="views\notify_script.html" />
     <Content Include="views\server-error.html" />
     <Content Include="public\images\glyphicons-halflings-white.png" />
     <Content Include="public\images\glyphicons-halflings.png" />

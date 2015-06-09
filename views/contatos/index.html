@@ -21,9 +21,10 @@
             <tr>
                 <td><%- contato.nome %></td>
                 <td><%- contato.email %></td>
+                <td><span id="notify_<%- contato.email %>">Offline</span></td>
                 <td>
                     <a href="/contato/<%- index %>">Detalhes</a>
-                    <a href="/chat/<%- contato.email %>">Conversar</a>
+                    <a href="/chat/<%- contato.email %>" id="chat_<%- contato.email %>">Conversar</a>
                 </td>
             </tr>
             <% }) %>
